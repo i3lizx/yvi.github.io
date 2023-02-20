@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YouTube Downloader</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-CyaBmC+1BLuOc+oV7dOWSdmbzS9zKPQLKcqz+wmgcclHSU6z4U6jG1+ucvFefH1G" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-4">YouTube Downloader</h1>
+                        <form action="{{ url_for('download') }}" method="post">
+                            <div class="mb-3">
+                                <label for="url" class="form-label">Enter YouTube URL:</label>
+                                <input type="text" class="form-control" id="url" name="url" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Download</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-riTMhJyLzBEQ2+oxwZxWcOv/F0alSK9S6U+fGyfW8J3q14BZcJusZiYYzNUeByl1" crossorigin="anonymous"></script>
+</body>
+</html>
